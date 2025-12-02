@@ -21,7 +21,8 @@ Ce projet a été réalisé en React (Vite).
 ## Installation et lancement du projet
 
 1. Cloner le projet avec Git :
-   git clone <URL-DU-REPO>
+   git clone https://github.com/Sahar-gh-eng/portfolio-john-doe.git
+
 
 2. Installer les dépendances :
    npm install
