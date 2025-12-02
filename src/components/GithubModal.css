@@ -1,0 +1,103 @@
+/* Fond gris foncé transparent */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Carte de la modale */
+.modal-card {
+  background: #111827;
+  color: #f9fafb;
+  width: 380px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  padding: 1.5rem 1.75rem 1.75rem;
+}
+
+/* Header de la modale */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.modal-header h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Bouton X */
+.modal-close {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Corps */
+.modal-body {
+  display: flex;
+  gap: 1.25rem;
+}
+
+/* Avatar */
+.modal-avatar img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Texte */
+.modal-info {
+  flex: 1;
+  font-size: 0.85rem;
+}
+
+.modal-name {
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.modal-location {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 0.6rem;
+}
+
+.modal-bio {
+  font-size: 0.8rem;
+  color: #e5e7eb;
+  margin-bottom: 0.7rem;
+}
+
+.modal-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.8rem;
+}
+
+.modal-stats li {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Lien */
+.modal-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.modal-link:hover {
+  text-decoration: underline;
+}

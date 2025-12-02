@@ -1,0 +1,750 @@
+/* ===== Reset simple ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #111827;
+  background: #f5f7fb;
+}
+
+/* Pour que main + footer prennent toute la hauteur si besoin */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header / Nav (version simple) ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #111827;
+  color: #f9fafb;
+  padding: 0.75rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.main-nav a:hover {
+  color: #ffffff;
+}
+
+.main-nav .active {
+  color: #60a5fa;
+}
+
+/* ===== Layout global ===== */
+main {
+  flex: 1;
+}
+
+/* =========================
+   HOME
+   ========================= */
+
+/* Hero */
+.hero {
+  min-height: 60vh;
+  padding: 4rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-image: url("/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #f9fafb;
+}
+
+.hero-content {
+  max-width: 640px;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  margin: 0 0 1.75rem;
+  color: #e5e7eb;
+}
+
+.hero-button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 2.3rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: #ef4444;
+  color: #f9fafb;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  background: #dc2626;
+}
+
+/* Bloc A propos + Compétences */
+.home-main {
+  max-width: 1120px;
+  margin: -3rem auto 0;
+  padding: 0 2.5rem 4rem;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.5rem;
+}
+
+/* Cartes */
+.card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+.section-title {
+  font-size: 1.3rem;
+  margin: 0 0 1.25rem;
+  border-bottom: 3px solid #2563eb;
+  display: inline-block;
+  padding-bottom: 0.35rem;
+}
+
+/* A propos */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.about-photo {
+  width: 100%;
+  border-radius: 0.5rem;
+  display: block;
+  object-fit: cover;
+}
+
+.about-text p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+/* Compétences */
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.9rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.skill-bar {
+  height: 0.55rem;
+  border-radius: 999px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #2563eb;
+}
+
+/* ===== Footer très simple ===== */
+.site-footer {
+  background: #111827;
+  color: #9ca3af;
+  padding: 1.25rem 2.5rem;
+  font-size: 0.85rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* texte à gauche */
+.footer-left {
+  opacity: 0.9;
+}
+
+/* icônes réseaux sociaux */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-social a {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: background-color 0.15s ease, transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.footer-social a:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.45);
+}
+
+.footer-icon {
+  width: 16px;
+  height: 16px;
+}
+
+
+/* =========================
+   PAGE SERVICES
+   ========================= */
+
+.page.services-page {
+  background: #f3f4f6;
+  min-height: calc(100vh - 64px); /* ajuste si besoin selon la hauteur du header + footer */
+}
+
+/* Bandeau bleu en haut de la page */
+.page-hero {
+  background: radial-gradient(circle at 10% 20%, #1d4ed8 0, #020617 55%);
+  color: #f9fafb;
+  text-align: center;
+  padding: 4rem 6% 6rem;
+}
+
+.page-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 0.98rem;
+  color: #cbd5f5;
+}
+
+.page-underline {
+  width: 120px;
+  height: 3px;
+  background: #2563eb;
+  margin: 1.75rem auto 0;
+}
+
+/* Grille des trois cartes */
+.services-grid {
+  max-width: 1100px;
+  margin: -60px auto 3rem; /* remonte les cartes sur le bandeau */
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Carte individuelle */
+.service-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 2.1rem 1.9rem;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.18);
+  text-align: center;
+}
+
+/* Icône en haut de la carte */
+.service-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  border: 1px solid #dbe3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #2563eb;
+  margin: 0 auto 1.25rem;
+}
+
+/* Titre de la carte */
+.service-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Texte de la carte */
+.service-text {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.55;
+}
+
+/* =========================
+   PAGE PORTFOLIO
+   ========================= */
+
+.page.portfolio-page {
+  background: #f3f4f6;
+  min-height: calc(100vh - 64px);
+}
+
+/* Bandeau avec image/visuel en haut */
+.portfolio-hero {
+  position: relative;
+  height: 220px;
+  background: radial-gradient(circle at 10% 20%, #1d4ed8 0, #020617 60%);
+  color: #f9fafb;
+}
+
+.portfolio-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* on réutilise .page-title / .page-subtitle / .page-underline déjà stylés */
+
+/* Grille 3 x 2 */
+.portfolio-grid {
+  max-width: 1100px;
+  margin: -60px auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Carte */
+.portfolio-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.16);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Zone image du projet */
+.portfolio-card-image {
+  height: 170px;
+  background: linear-gradient(135deg, #1d4ed8, #38bdf8); /* fallback */
+}
+
+/* image à l'intérieur de la zone */
+.portfolio-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* variantes très légères pour donner un peu de variété (si pas d'image) */
+.portfolio-card-image--2 {
+  background: linear-gradient(135deg, #f97316, #fb7185);
+}
+.portfolio-card-image--3 {
+  background: linear-gradient(135deg, #14b8a6, #22c55e);
+}
+.portfolio-card-image--4 {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+}
+.portfolio-card-image--5 {
+  background: linear-gradient(135deg, #0ea5e9, #4ade80);
+}
+.portfolio-card-image--6 {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+/* Corps de la carte */
+.portfolio-card-body {
+  padding: 1.4rem 1.5rem 1rem;
+}
+
+.portfolio-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.portfolio-card-category {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 0.9rem;
+}
+
+/* Footer de la carte (tech) */
+.portfolio-card-footer {
+  padding: 0.85rem 1.5rem 1.1rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Bouton réutilisable */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.4);
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact-page {
+  padding-bottom: 4rem;
+}
+
+.contact-hero {
+  padding: 5rem 0 3rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #0b1b33, #092048);
+}
+
+.contact-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-hero p {
+  margin: 0 auto 1.5rem;
+  max-width: 700px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.contact-hero .section-underline {
+  width: 80px;
+  height: 3px;
+  background-color: #2f80ed;
+  margin: 0 auto;
+  border-radius: 999px;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  margin-top: -3rem;
+}
+
+.contact-form-card,
+.contact-info-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.contact-form-card h2,
+.contact-info-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-underline {
+  width: 70px;
+  height: 3px;
+  background-color: #2f80ed;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+/* Formulaire */
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2933;
+}
+
+.form-group input,
+.form-group textarea {
+  border-radius: 999px;
+  border: 1px solid #d0d7e2;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+  border-radius: 16px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2f80ed;
+  box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.15);
+}
+
+/* On réutilise .btn-primary pour le bouton d'envoi */
+.contact-form .btn-primary {
+  margin-top: 0.5rem;
+}
+
+/* Bloc infos + carte */
+.contact-info {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #4a5563;
+}
+
+.contact-name {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.map-wrapper {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.15);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+}
+
+/* =========================
+   MENTIONS LÉGALES
+   ========================= */
+
+.legal-page {
+  padding-bottom: 4rem;
+}
+
+.legal-hero {
+  padding: 5rem 0 3rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #0b1b33, #092048);
+}
+
+.legal-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.legal-section {
+  margin-top: -2.5rem;
+}
+
+.accordion {
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.accordion-item + .accordion-item {
+  border-top: 1px solid #e5e7eb;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1.1rem 1.5rem;
+  background-color: #f5f7fb;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+  background-color: #edf1fb;
+}
+
+.accordion-header.open {
+  background-color: #e0e9ff;
+}
+
+.accordion-body {
+  padding: 1.2rem 1.5rem 1.4rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.accordion-body h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-name {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.accordion-body a {
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+.accordion-body a:hover {
+  text-decoration: underline;
+}
+
+/* petite flèche à droite */
+.chevron {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #4b5563;
+  border-bottom: 2px solid #4b5563;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.accordion-header.open .chevron {
+  transform: rotate(-135deg);
+}
+
+/* ==== Correction largeur pages internes ==== */
+
+/* Force les pages internes (Services, Portfolio, Contact, Mentions légales)
+   à prendre toute la largeur de la fenêtre */
+.page {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Évite une barre de scroll horizontale si un élément déborde un peu */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .home-main {
+    margin-top: 0;
+    padding: 2rem 1.5rem 3rem;
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    flex-direction: column;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}
