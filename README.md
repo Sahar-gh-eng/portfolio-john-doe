@@ -1,65 +1,91 @@
-# Portfolio John Doe
+# Portfolio – John Doe
 
-Projet de création d’un site portfolio développé dans le cadre de la formation.
-Réalisation effectuée par Sahar Sediame.
-
----
-
-## Description du projet
-
-Le site présente :
-- Une page d’accueil
-- Une page Services
-- Une page Portfolio
-- Une page Contact avec formulaire
-- Une page Mentions légales
-
-Ce projet a été réalisé en React (Vite).
+Projet de création d’un site portfolio réalisé dans le cadre de la formation Développeur Web.  
+Réalisation effectuée par **Sahar Sediame**.
 
 ---
 
-## Installation et lancement du projet
+## 🎯 Objectif du projet
 
-1. Cloner le projet avec Git :
-   git clone https://github.com/Sahar-gh-eng/portfolio-john-doe.git
-
-
-2. Installer les dépendances :
-   npm install
-
-3. Lancer le serveur de développement :
-   npm run dev
-
-Le site sera alors accessible à l’adresse indiquée dans le terminal (par exemple http://localhost:5173).
+Ce projet a pour but de mettre en pratique :
+- La création d’une application React avec Vite
+- La construction de pages statiques multi-sections
+- L’utilisation de composants réutilisables (Header, Footer…)
+- L’implémentation de hooks (`useState`)
+- La mise en page responsive
+- L’utilisation d’un formulaire avec champs obligatoires
 
 ---
 
-## Structure du projet
+## 📄 Pages du site
 
-- public/
-  - images/      → contient les images du site
+Le site contient les pages suivantes :
 
-- src/
-  - components/  → contient les composants réutilisables (Header, Footer, Modale…)
-  - pages/       → contient les pages (Home, Services, Portfolio, Contact, Mentions légales)
-  - App.jsx
-  - main.jsx
+### • Accueil  
+Page de présentation générale du portfolio.
 
-- README.md
-- vite.config.*
-- package.json
+### • Services  
+Présentation des prestations proposées, mise en page avec Bootstrap.
 
----
+### • Portfolio  
+Galerie de projets réalisés.
 
-## Technologies utilisées
+### • Contact  
+Formulaire de contact fonctionnel avec champs obligatoires + informations de contact + carte Google Maps.
 
-- React
-- Vite
-- JavaScript
-- HTML / CSS
+### • Mentions légales  
+Page incluant plusieurs sections sous forme d’accordéon interactif (`useState`).
 
 ---
 
-## Auteur
+## 🚀 Installation & Lancement
+
+Cloner le projet :
+
+```bash
+git clone https://github.com/Sahar-gh-eng/portfolio-john-doe.git
+
+Installer les dépendances :
+npm install
+
+Lancer le serveur de développement :
+npm run dev
+
+Le site sera accessible à l'adresse indiquée dans le terminal (ex. : http://localhost:5173
+
+📁 Structure du projet
+public/
+  images/               → Images du site
+
+src/
+  components/
+    layout/             → Header, Footer
+    ...                 → Autres composants si ajoutés
+  pages/                → Home, Services, Portfolio, Contact, Legal (Mentions légales)
+  App.jsx               → Routing principal
+  main.jsx              → Point d’entrée
+
+package.json
+vite.config.js
+README.md
+
+🛠 Technologies utilisées
+
+React
+Vite
+JavaScript
+HTML / CSS
+Bootstrap (page Services)
+
+👩‍💻 Auteur
 
 Projet réalisé par Sahar Sediame dans le cadre de la formation.
+
+✔ Bonus pédagogique
+
+Utilisation de useState pour :
+gérer le menu mobile
+gérer l’accordéon des mentions légales
+Mise en page responsive sur toutes les pages
+Composants réutilisables et isolés
+
